@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object>
+	<!-- parameter scripts generate parameters. Parameters can be used as variables -->
+	<parameter-script name="halfx">
+		<set value="4"/>
+	</parameter-script>
+	<parameter-script name="halfy">
+		<set value="4"/>
+	</parameter-script>
+	<parameter-script name="-halfx">
+		<set value="-4"/>
+	</parameter-script>
+	<parameter-script name="-halfy">
+		<set value="-4"/>
+	</parameter-script>
+
+	<!-- this part may be the same, as long as parameters stay the same -->
+	<mesh>
+		<triangle>
+			<!-- If x,y,z is a number, take it. Otherwise, interpret as variable -->
+			<vertex x="halfx" y="halfy" z="0" />
+			<vertex x="halfx" y="-halfy" z="0" />
+			<vertex x="-halfx" y="-halfy" z="0" />
+			<texture name="floor.png" />
+		</triangle>
+		<triangle>
+			<!-- If x,y,z is a number, take it. Otherwise, interpret as variable -->
+			<vertex x="halfx" y="halfy" z="0" />
+			<vertex x="-halfx" y="-halfy" z="0" />
+			<vertex x="-halfx" y="halfy" z="0" />
+			<texture name="floor.png" />
+		</triangle>
+	</mesh>
+</object>

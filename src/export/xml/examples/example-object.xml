@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object>
+	<!-- parameter scripts generate parameters. Parameters can be used as variables -->
+	<parameter-script name="width">
+		<load-tag tag="width" default="2"/>
+		<interprete type="length" />
+		<round round=".2" />
+	</parameter-script>
+
+<!-- this part may be the same, as long as parameters stay the same -->
+	<mesh>
+		<triangle>
+			<!-- If x,y,z is a number, take it. Otherwise, interpret as variable -->
+			<vertex x="0" y="width" z="0" />
+			<vertex x="1.5" y="width" z="0" />
+			<vertex x="1.5" y="0" z="0" />
+			<texture name="testtextures/test.png" />
+		</triangle>
+		<triangle>
+			<!-- If x,y,z is a number, take it. Otherwise, interpret as variable -->
+			<vertex x="0" y="width" z="0" />
+			<vertex x="1.5" y="0" z="0" />
+			<vertex x="0" y="0" z="0" />
+			<texture name="testtextures/test.png" />
+		</triangle>
+	</mesh>
+</object>
